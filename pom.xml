@@ -12,6 +12,7 @@
     <modules>
         <module>testcloudserver</module>
         <module>testapigateway</module>
+        <module>testservicediscovery</module>
     </modules>
 
     <parent>
