@@ -1,0 +1,3 @@
+spring:
+  application:
+    name: Test Eurika-based Discovery Service
