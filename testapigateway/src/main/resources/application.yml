@@ -1,0 +1,8 @@
+server:
+  port: 9080
+
+zuul:
+  ribbon-isolation-strategy: semaphore
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 60000

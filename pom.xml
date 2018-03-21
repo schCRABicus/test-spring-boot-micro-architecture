@@ -11,6 +11,7 @@
     <description>Test Spring Boot Microservice</description>
     <modules>
         <module>testcloudserver</module>
+        <module>testapigateway</module>
     </modules>
 
     <parent>
