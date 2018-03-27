@@ -1,0 +1,36 @@
+version: "3.3"
+
+services:
+  test-service-discovery:
+    build:
+      context: ./testservicediscovery
+    ports:
+      - "8761:8761"
+
+  test-config-server:
+    build:
+      context: ./testcloudserver
+    ports:
+      - "8888:8888"
+
+  test-api-gateway:
+    build:
+      context: ./testapigateway
+    ports:
+      - "8762:8762"
+    depends_on:
+      - test-service-discovery
+    links:
+      - test-service-discovery
+
+  admin-service:
+    build:
+      context: ./adminservice
+    ports:
+      - "8080:8080"
+    depends_on:
+      - test-config-server
+      - test-service-discovery
+    links:
+      - test-service-discovery
+      - test-config-server

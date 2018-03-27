@@ -13,6 +13,7 @@
         <module>testcloudserver</module>
         <module>testapigateway</module>
         <module>testservicediscovery</module>
+        <module>adminservice</module>
     </modules>
 
     <parent>

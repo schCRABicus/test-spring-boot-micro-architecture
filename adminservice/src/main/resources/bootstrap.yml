@@ -1,6 +1,9 @@
 spring:
   application:
-    name: Test API Gateway Server
+    name: admin-service
+  cloud:
+    config:
+      uri: http://localhost:8888
 
 eureka:
   instance:
@@ -8,6 +11,5 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
-
     service-url:
       defaultZone: http://test-service-discovery:8761/eureka/

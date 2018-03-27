@@ -1,18 +1,27 @@
 server:
   port: 8762
 
+# https://piotrminkowski.wordpress.com/2017/02/05/part-1-creating-microservice-using-spring-cloud-eureka-and-zuul/
 zuul:
   ribbon-isolation-strategy: semaphore
+  prefix: /api
+  routes:
+    admin:
+      path: /admin/**
+      serviceId: ADMIN-SERVICE
 
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
 
-eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    register-with-eureka: true
-    fetch-registry: true
-    service-url:
-      defaultzone: http://localhost:8761/eureka/
+#eureka:
+#  instance:
+#    prefer-ip-address: true
+##  instance:
+##    prefer-ip-address: false
+##    hostname: localhost
+#  client:
+#    register-with-eureka: true
+#    fetch-registry: true
+#    service-url:
+#      defaultzone: http://test-service-discovery:8761/eureka/
