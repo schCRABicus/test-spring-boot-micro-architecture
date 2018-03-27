@@ -9,19 +9,10 @@ zuul:
     admin:
       path: /admin/**
       serviceId: ADMIN-SERVICE
+    calculation:
+      path: /calculation/**
+      serviceId: CALCULATION-SERVICE
 
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
-
-#eureka:
-#  instance:
-#    prefer-ip-address: true
-##  instance:
-##    prefer-ip-address: false
-##    hostname: localhost
-#  client:
-#    register-with-eureka: true
-#    fetch-registry: true
-#    service-url:
-#      defaultzone: http://test-service-discovery:8761/eureka/

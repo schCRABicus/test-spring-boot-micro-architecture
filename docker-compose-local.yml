@@ -34,3 +34,15 @@ services:
     links:
       - test-service-discovery
       - test-config-server
+
+  calculation-service:
+    build:
+      context: ./calculationservice
+    ports:
+      - "8081:8081"
+    depends_on:
+      - test-config-server
+      - test-service-discovery
+    links:
+      - test-service-discovery
+      - test-config-server

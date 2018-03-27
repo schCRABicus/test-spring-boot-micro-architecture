@@ -9,11 +9,12 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>admin-service</artifactId>
+    <artifactId>calculation-service</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>Admin Service providing accounts facilities</description>
+    <description>Service responsible for computation services</description>
 
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter</artifactId>
@@ -47,7 +48,6 @@
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
-        <!-- https://blog.docker.com/2017/05/spring-boot-development-docker/ -->
     </dependencies>
 
     <build>
@@ -57,6 +57,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <finalName>calculation-service</finalName>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>

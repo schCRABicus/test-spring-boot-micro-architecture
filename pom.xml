@@ -14,6 +14,7 @@
         <module>testapigateway</module>
         <module>testservicediscovery</module>
         <module>adminservice</module>
+        <module>calculationservice</module>
     </modules>
 
     <parent>
